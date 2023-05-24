@@ -5,7 +5,7 @@ import {
   SiPhp,
   SiTailwindcss,
   SiReact,
-} from "react-icons/Si";
+} from "react-icons/all";
 import functionjs from "../assets/images/functionjs.png";
 import html from "../assets/images/html.png";
 import css from "../assets/images/css.png";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AiOutlineCloseCircle } from "react-icons/Ai";
-import { HiOutlineMenuAlt4 } from "react-icons/Hi";
+import { AiOutlineCloseCircle } from "react-icons/all";
+import { HiOutlineMenuAlt4 } from "react-icons/all";
 
 const Headercomp = () => {
   const [open, setOpen] = useState(false);
