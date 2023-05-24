@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Cardcontentcomp, Layout, Titlecomp } from "../components";
-import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/Bs";
+import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/BS";
 
 const Homepage = () => {
   return (
