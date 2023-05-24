@@ -1,6 +1,7 @@
+import React from "react";
 import { Layout } from "../components";
 
-const Aboutpage = () => {
+const Helppage = () => {
   return (
     <Layout>
       <p className="text-2xl text-yellow-500">
@@ -10,4 +11,4 @@ const Aboutpage = () => {
   );
 };
 
-export default Aboutpage;
+export default Helppage;
