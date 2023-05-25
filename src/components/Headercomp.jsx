@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineCloseCircle } from "react-icons/all";
 import { HiOutlineMenuAlt4 } from "react-icons/all";
+import { useNavigate } from "react-router-dom";
 
 const Headercomp = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -13,7 +15,7 @@ const Headercomp = () => {
             Nokturnal.<span className="text-orange-500 font-bold">Dev</span>
           </p>
         </div>
-        <div className="md:flex hidden md:justify-between md:gap-5 cursor-pointer">
+        <div className="md:flex hidden md:justify-between md:gap-5 cursor-pointer items-center">
           <NavLink
             to="/"
             className={({ isActive, isPending }) =>
@@ -22,7 +24,6 @@ const Headercomp = () => {
           >
             home
           </NavLink>
-
           <NavLink
             to="/about"
             className={({ isActive, isPending }) =>
@@ -47,6 +48,18 @@ const Headercomp = () => {
           >
             help
           </NavLink>
+          <button
+            onClick={() => navigate("/masuk")}
+            className="border-2 border-orange-500 hover:bg-orange-500 hover:text-white py-2 px-4 rounded-md"
+          >
+            Masuk
+          </button>
+          <button
+            onClick={() => navigate("/daftar")}
+            className="border-2 border-orange-500 hover:bg-orange-500 hover:text-white py-2 px-4 rounded-md"
+          >
+            Daftar
+          </button>
         </div>
         {open ? (
           <>
@@ -95,6 +108,18 @@ const Headercomp = () => {
                   >
                     help
                   </NavLink>
+                  <button
+                    onClick={() => navigate("/masuk")}
+                    className="border-2 border-orange-500 hover:bg-orange-500 hover:text-white py-2 px-4 rounded-md"
+                  >
+                    Masuk
+                  </button>
+                  <button
+                    onClick={() => navigate("/daftar")}
+                    className="border-2 border-orange-500 hover:bg-orange-500 hover:text-white py-2 px-4 rounded-md"
+                  >
+                    Daftar
+                  </button>
                 </div>
               </div>
             </div>

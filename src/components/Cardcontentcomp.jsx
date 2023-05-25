@@ -9,7 +9,7 @@ const Cardcontentcomp = () => {
         <Link
           to={`/detail/${item.id}`}
           key={index}
-          className={`w-full h-80 border-2 cursor-pointer flex items-center justify-center ${item.border} rounded-md transition-transform duration-300 ease-in-out transform hover:scale-110`}
+          className={`w-full h-80 border-2 cursor-pointer flex items-center justify-center ${item.border} rounded-md lg:transition-transform lg:duration-300 lg:ease-in-out lg:transform lg:hover:scale-110`}
         >
           <div className="text-center">
             <item.logo className={`text-[100px] ${item.color}  w-full`} />
