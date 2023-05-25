@@ -24,7 +24,9 @@ const Headercomp = () => {
       <nav
         id="navbar"
         className={`h-20 top-0 sticky z-50 md:px-40 bg-white px-2 flex justify-between items-center ${
-          scrollUp ? "border-b-2 border-orange-500" : ""
+          scrollUp
+            ? "border-b backdrop-blur-md bg-white/40 border-slate-500"
+            : ""
         }`}
       >
         <div className="cursor-pointer">
