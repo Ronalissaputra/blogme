@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineCloseCircle } from "react-icons/all";
 import { HiOutlineMenuAlt4 } from "react-icons/all";
@@ -7,9 +7,26 @@ import { useNavigate } from "react-router-dom";
 const Headercomp = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [scrollUp, setScrollUp] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const fixedNav = window.pageYOffset;
+      setScrollUp(fixedNav > 150);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <div className="h-20 top-0 sticky z-50 md:px-40 bg-white px-2 flex justify-between items-center">
+      <nav
+        id="navbar"
+        className={`h-20 top-0 sticky z-50 md:px-40 bg-white px-2 flex justify-between items-center ${
+          scrollUp ? "border-b-2 border-orange-500" : ""
+        }`}
+      >
         <div className="cursor-pointer">
           <p className="text-2xl">
             Nokturnal.<span className="text-orange-500 font-bold">Dev</span>
@@ -130,7 +147,7 @@ const Headercomp = () => {
             <HiOutlineMenuAlt4 className="text-3xl" />
           </button>
         </div>
-      </div>
+      </nav>
     </>
   );
 };
